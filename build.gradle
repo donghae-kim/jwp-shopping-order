@@ -17,10 +17,18 @@ dependencies {
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.rest-assured:rest-assured:4.4.0'
-
+    runtimeOnly 'com.mysql:mysql-connector-j:8.0.33'
     runtimeOnly 'com.h2database:h2'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+tasks.register('copyPrivate', Copy) {
+    copy {
+        from './jwp-shopping-order-private'
+        include "application.properties"
+        into 'src/main/resources'
+    }
 }

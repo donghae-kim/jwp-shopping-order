@@ -1,0 +1,8 @@
+[submodule "application.properties"]
+	path = application.properties
+	url = https://github.com/donghae-kim/jwp-shopping-order-private.git
+	branch = secret
+[submodule "jwp-shopping-order-private"]
+	path = jwp-shopping-order-private
+	url = https://github.com/donghae-kim/jwp-shopping-order-private.git
+	branch = secret
